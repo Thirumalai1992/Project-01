@@ -1,0 +1,556 @@
+/*Reset css*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*************************************************
+	Common css starts here
+*************************************************/
+
+body,
+html{
+	font-family: 'robotoregular';
+	 height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+	 font-family: 'robotomedium';
+	line-height: 25px;
+}
+
+/*************************************************
+	Common css Ends here
+*************************************************/
+
+
+
+
+/*************************************************
+	Header css starts here
+*************************************************/
+
+
+.header_view {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #EEEEEE;
+    height: 54px;
+}
+.logo {
+	width: 5%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #eee;
+}
+.header_search {
+    width: 75%;
+    height: 100%;
+    margin: 0 15px;
+    position: relative;
+	    align-items: center;
+    display: flex;
+}
+.header_profile {
+    width: 20%;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.header_profile > span {
+    margin: 0 10px;
+}
+.header_search form{
+	position: relative;
+}
+.header_search input{
+	background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 2px rgb(0 0 0 / 5%);
+    border-radius: 6px;
+    padding: 9px 28px;
+    width: 492px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #111827;
+}
+.header_search button{
+	position: absolute;
+    left: 0;
+    border: none;
+    background: transparent;
+	padding: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+/*************************************************
+	Header css Ends here
+*************************************************/
+
+
+
+/************************************************
+	Main css Starts here
+************************************************/
+
+
+.folder_view {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 54px;
+    bottom: 0;
+	    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.folder_menu {
+    float: left;
+    width: 4.8%;
+	border-right: 1px solid #eee;
+	height: 100%;
+}
+.folder_details {
+    float: left;
+    width:95.2%;
+	height: 100%;
+}
+.folder_nav {
+    height: 100%;
+}
+.folder_nav ul.nav.nav-pills{
+	
+}
+.folder_nav ul.nav.nav-pills li{
+	width: 100%;
+}
+.folder_nav ul.nav.nav-pills li a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #666666;
+    font-size: 10px;
+    border-left: 2px solid transparent;
+    font-family: 'robotoregular';
+    text-decoration: none;
+    padding: 12px 0;
+}
+.folder_nav ul.nav.nav-pills li.active a{
+	background: #EDF4FD;
+	color: #0084FF;
+	border-color:  #0085FF;
+	font-family: 'robotomedium';
+}
+span.nav_img {
+    display: block;
+}
+span.nav_mm {
+    width: 100%;
+    display: block;
+}
+.folder_path {
+    padding: 5px 20px;
+    border-bottom: 1px solid #eee;
+}
+.folder_path a{
+    position: relative;
+    font-size: 12px;
+    line-height: 20px;
+    display: inline-block;
+    margin-right: 20px;
+    color: #666666;
+	text-decoration: none;
+}
+.folder_path a::after{
+	content: "";
+	background: url('../images/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: -15px;
+    z-index: 2;
+    width: 3px;
+    height: 6px;
+    top: 8px;
+}
+.folder_path a:last-child::after{
+	display: none;
+}
+.folder_path a.current{
+	font-family: 'robotomedium';
+}
+
+.folder_assets {
+    height: 100%;
+    padding: 20px;
+	position: relative;
+}
+.folder_assets > ul{
+	display: flex;
+}
+.folder_assets > ul > li{
+    border: 1px solid #F1F1F1;
+    Width: 170px;
+    height: 60px;
+    margin:0 10px 15px 0;
+	padding: 5px 8px;
+	border-radius:5px;
+	cursor: pointer;
+}
+.folder_contents {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+.folder_top{
+	display: flex;
+    align-items: center;
+    width: 100%;
+	padding-bottom: 8px;
+}
+.folder_img{
+	background-image: url(../images/Folder.svg);
+    width: 20px;
+    height:20px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.folder_name{
+	font-size: 13px;
+    line-height: 18px;
+    color: #333333;
+    margin: 0 10px;
+}
+.folder_count{
+	color: #7D7D7D;
+	font-size: 12px;
+	line-height: 18px;
+	display: block;
+	margin-left: 20px;
+}
+
+.folder_footer{
+	display: table-cell;
+    width: 1%;
+    vertical-align: middle;
+    height: auto;
+}
+.folder_fav{
+	background-image: url(../images/heart_filled.svg);
+    width: 20px;
+    height:18px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size:100%;
+}
+.folder_info{
+	background-image: url(../images/info.svg);
+    width: 17px;
+    height:18px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size:100%;
+	position: relative;
+    right: -7px;
+}
+.folder_dots{
+	background-image: url(../images/dot.svg);
+    width: 15px;
+    height:18px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size:100%;
+}
+
+.folder_preview{
+	position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: #FFFFFF;
+	box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04);
+	width: 300px;
+	    display: none;
+
+}
+
+.folder_previewhead {
+    display: flex;
+    align-items: center;
+    width: 100%;
+	position: relative;
+	padding: 15px 18px;
+}
+
+.previewclose{
+	position: absolute;
+	right: 15px;
+    top: 12px;
+	background-image: url(../images/cross.svg);
+    width: 10px;
+    height:15px;
+    display:block;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size:100%;
+	cursor: pointer;
+}
+.preview_body{
+	
+}
+.preview_body .nav-tabs{
+	border-bottom: 1px solid #EAEAEA;
+	padding: 0 18px;
+}
+.preview_body .nav-tabs .nav-item .nav-links{
+    margin-bottom: 0;
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background: transparent;
+    font-size: 12px;
+    color: #666666;
+    line-height: 20px;
+    text-decoration: none;
+    display: block;
+    padding: 0px 0px 8px 0;
+	margin: 0 20px 0 0;
+}
+.preview_body .nav-tabs .nav-item .nav-links.active{
+	border-bottom: 2px solid #0084FF;
+	color: #0084FF;
+	font-family: 'robotomedium';
+}
+
+.preview_detailslist{
+	padding: 18px;
+}
+.preview_detailslist li{
+	padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+	width: 100%;
+}
+.preview_detailslist li span{
+	flex: 1;
+}
+.preview_detailslist li .preview_title{
+	font-size: 12px;
+	line-height: 100%;
+	color: #666666;
+}
+.preview_detailslist li .preview_name{
+	font-size: 12px;
+	line-height: 100%;
+	text-align: right;
+	color: #333333;
+}
+
+.preview_comments{
+	
+}
+.preview_comments li{
+	padding: 13px 18px;
+    border-bottom: 1px solid #EAEAEA;
+}
+.prev_coment_head{
+	display: flex;
+    align-items: center;
+    width: 100%;
+}
+.prev_coment_head .coment_thumb{
+	position: relative;
+    left: -8px;
+    top: 0;
+    background-image: url(../images/avator.svg);
+    width: 38px;
+    height: 38px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 100%;
+    cursor: pointer;
+}
+.prev_coment_head .coment_thumb .comnt_msg{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    background-image: url(../images/comment.svg);
+    width: 12px;
+    height: 12px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 100%;
+    cursor: pointer;
+    background-color: #fff;
+}
+.prev_coment_head .coment_name{
+	margin-left:-5px;
+}
+.prev_coment_head .coment_name h1{
+	font-size: 12px;
+    color: #111827;
+    font-weight: 500;
+	line-height: 15px;
+}
+.prev_coment_head .coment_name .coment_time{
+	color: #6B7280;
+    font-size: 13px;
+    line-height: 15px;
+    display: inline-block;
+}
+.prev_coment_head .prev_coment_detail{
+	
+}
+.prev_coment_detail p{
+	color: #374151;
+    font-size: 12px;
+    line-height: 16px;
+	font-style: normal;
+font-weight: normal;
+}
+
+/************************************************
+	Main css Ends here
+************************************************/
+
+/************************************************
+	Media Query Starts here
+************************************************/
+
+@media screen and (min-width:1000px) and (max-width:1199px) {
+	
+.folder_menu {
+    width: 6%;
+}
+.folder_details {
+	width: 94%;
+}
+.folder_preview {
+    width: 270px;
+}
+.logo {
+    width: 6.3%;
+}
+}
+
+@media screen and (max-width:992px) {
+.logo {
+    width: 7.3%;
+}	
+.folder_menu {
+    width: 6.8%;
+}
+.folder_details {
+    width: 93.2%;
+}
+.folder_preview {
+    width: 270px;
+}
+}
+
+
+@media screen and (max-width:767px) {
+.header_search input {
+    width: 200px;   
+}	
+.logo {
+	width: 10%;
+	padding: 5px;
+}
+.header_search {
+    width: 55%;
+    margin: 0 8px;
+}
+.header_profile {
+    width: 35%;
+    margin: 0 2px;
+}
+.folder_menu {
+	width: 100%;
+	float: none;
+	border-right: none;
+	height: auto;
+	border-bottom: 1px solid #eee;
+}
+.folder_nav ul.nav.nav-pills li {
+    width: 20%;
+}
+.folder_nav {
+    height: auto;
+}
+.folder_assets > ul {
+    display: block;
+}
+.folder_assets > ul > li {
+    Width: 100%;
+    margin: 0 0px 15px 0;
+	height: auto;
+}
+.folder_details {
+    width: 100%;
+}
+.folder_preview {
+    width: 100%;
+}
+}
+
+/************************************************
+	Media Query Ends here
+************************************************/
+
+
